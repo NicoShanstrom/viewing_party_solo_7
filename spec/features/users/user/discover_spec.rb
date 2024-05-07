@@ -6,7 +6,7 @@ RSpec.describe 'User Discover Page', type: :feature do
       @user1 = User.create!(name: 'Tommy', email: 'tommy@email.com')
       @user2 = User.create!(name: 'Sam', email: 'sam@email.com')
   
-      visit "/users/#{@user1.id}/discover"
+      visit discover_user_path(@user1)
     end
     it 'renders a button to discover top rated movies' do
       # save_and_open_page
@@ -19,7 +19,7 @@ RSpec.describe 'User Discover Page', type: :feature do
 
     it 'renders a button to search by movie title' do
       expect(page).to have_button('Search by movie title')
-      save_and_open_page
+      # save_and_open_page
     end
   end
 end

@@ -9,7 +9,7 @@ class UsersController < ApplicationController
    end
    
    def discover
-      @user = User.find(params[:user_id])
+      @user = User.find(params[:id])
    #  api_service = ApiService.new
    #  @top_rated_movies = api_service.get("/movie/top_rated")
    end
