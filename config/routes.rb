@@ -8,5 +8,7 @@ Rails.application.routes.draw do
   get '/register', to: 'users#new', as: 'register_user'
 
   resources :users, only: [:show, :create] do
+    get '/discover', to: 'users#discover', as: 'discover'
+    get '/discover/search_by_title', to: 'users#search_by_title', as: 'search_by_title'
   end
 end

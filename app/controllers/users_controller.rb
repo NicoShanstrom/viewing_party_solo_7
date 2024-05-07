@@ -7,6 +7,12 @@ class UsersController < ApplicationController
    def show
       @user = User.find(params[:id])
    end
+   
+   def discover
+      @user = User.find(params[:user_id])
+   #  api_service = ApiService.new
+   #  @top_rated_movies = api_service.get("/movie/top_rated")
+   end
 
    def create
       user = User.new(user_params)

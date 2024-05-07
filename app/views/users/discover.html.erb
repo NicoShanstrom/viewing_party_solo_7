@@ -1,0 +1,8 @@
+<h1><%=@user.name%>'s Discover Page</h1>
+
+<%= button_to "Discover top rated movies", user_discover_path, method: :get %>
+
+<%= form_with url: user_search_by_title_path do |form| %>
+  <%= form.text_field :search_keyword, placeholder: "Enter keyword(s) to search by movie title" %>
+  <%= form.submit "Search by movie title" %>
+<% end %>
