@@ -11,7 +11,7 @@ Rails.application.routes.draw do
     member do
       get 'discover'
     end
-    resources :movies, only: [:index, :show], controller: 'users/movies'
+    resources :movies, only: [:index, :show], controller: 'users/movies', param: :movie_id
   end
 
   # namespace :users do
