@@ -8,9 +8,13 @@ Rails.application.routes.draw do
   get '/register', to: 'users#new', as: 'register_user'
 
   resources :users, only: [:show, :create] do
-    get 'discover', on: :member
-    get 'search_by_title', on: :member
-    # get '/discover', to: 'users#discover', as: 'discover'
-    # get '/discover/search_by_title', to: 'users#search_by_title', as: 'search_by_title'
+    member do
+      get 'discover'
+    end
+    resources :movies, only: [:index, :show], controller: 'users/movies'
   end
+
+  # namespace :users do
+  #   resources :movies, only: [:index, :show]
+  # end
 end

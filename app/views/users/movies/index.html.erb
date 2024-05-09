@@ -1,0 +1,17 @@
+<h1>Movies</h1>
+
+<% if @movies.present? %>
+  <ul>
+    <% @movies.each do |movie| %>
+      <li>
+        <%= link_to movie[:title], user_movie_path(@user, movie[:id]) %>
+        <div class="vote-average" id="vote_average_<%= movie[:id] %>">
+          Vote Average: <%= movie[:vote_average] %>
+        </div>
+      </li>
+    <% end %>
+  </ul>
+<% else %>
+  <p>No movies found.</p>
+<% end %>
+<%= button_to "Back to Discover Page", discover_user_path(@user), method: :get %>
