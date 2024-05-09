@@ -1,18 +1,24 @@
 class UsersController < ApplicationController
-
+   before_action :set_user, only: [:discover, :movies, :show, :top_rated_movies]
    def new
       @user = User.new
    end
 
    def show
-      @user = User.find(params[:id])
+  
    end
    
    def discover
-      @user = User.find(params[:user_id])
-   #  api_service = ApiService.new
-   #  @top_rated_movies = api_service.get("/movie/top_rated")
+   
    end
+
+
+
+   # def search_by_title
+   #    moviedb_service = MoviedbService.new
+   #    response = moviedb_service.get("/3/search/keyword", query: { query: keyword, limit: 20 })
+   #    @movies = response[:results] if response.present?
+   # end
 
    def create
       user = User.new(user_params)
@@ -25,13 +31,13 @@ class UsersController < ApplicationController
       end   
    end
 
-
-
-
 private
 
   def user_params
       params.require(:user).permit(:name, :email)
   end
 
+  def set_user
+      @user = User.find(params[:id])
+  end
 end
