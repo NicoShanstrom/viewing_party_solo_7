@@ -8,9 +8,16 @@ class Users::MoviesController < ApplicationController
     else
         response = moviedb_service.get("/3/movie/top_rated?limit=20")
     end
-    @movies = response[:results] if response.present?
-
-    # puts "Movies: #{@movies.inspect}"
+    @movies = response[:results]
     # require 'pry'; binding.pry
+  end
+
+  def show
+    # require 'pry'; binding.pry
+    @user = User.find(params[:user_id])
+    moviedb_service = MoviedbService.new
+    response = moviedb_service.get("/3/movie/#{params[:movie_id]}")
+    # response = moviedb_service.get("/3/movie", {query: params[:movie_id]})
+    @movie = response[:results]
   end
 end
