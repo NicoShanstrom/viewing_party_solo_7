@@ -9,7 +9,6 @@ class Users::MoviesController < ApplicationController
         response = moviedb_service.get("/3/movie/top_rated?limit=20")
     end
     @movies = response[:results]
-    # require 'pry'; binding.pry
   end
 
   def show
@@ -24,6 +23,5 @@ class Users::MoviesController < ApplicationController
 
     reviews_response = moviedb_service.get("/3/movie/#{params[:id]}/reviews")
     @reviews = reviews_response[:results]
-    # require 'pry'; binding.pry
   end
 end

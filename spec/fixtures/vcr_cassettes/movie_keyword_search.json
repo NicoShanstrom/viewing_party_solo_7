@@ -1,0 +1,94 @@
+{
+  "http_interactions": [
+    {
+      "request": {
+        "method": "get",
+        "uri": "https://api.themoviedb.org/3/search/movie?limit=20&query=Shaw",
+        "body": {
+          "encoding": "US-ASCII",
+          "string": ""
+        },
+        "headers": {
+          "User-Agent": [
+            "Faraday v2.9.0"
+          ],
+          "Authorization": [
+            "Bearer <BEARER_TOKEN>"
+          ],
+          "Accept-Encoding": [
+            "gzip;q=1.0,deflate;q=0.6,identity;q=0.3"
+          ],
+          "Accept": [
+            "*/*"
+          ]
+        }
+      },
+      "response": {
+        "status": {
+          "code": 200,
+          "message": "OK"
+        },
+        "headers": {
+          "Content-Type": [
+            "application/json;charset=utf-8"
+          ],
+          "Transfer-Encoding": [
+            "chunked"
+          ],
+          "Connection": [
+            "keep-alive"
+          ],
+          "Date": [
+            "Fri, 10 May 2024 19:29:08 GMT"
+          ],
+          "Server": [
+            "openresty"
+          ],
+          "Cache-Control": [
+            "public, max-age=11972"
+          ],
+          "X-Memc": [
+            "HIT"
+          ],
+          "X-Memc-Key": [
+            "0c1a211945534a2d0f8de12873cddba2"
+          ],
+          "X-Memc-Age": [
+            "16343"
+          ],
+          "X-Memc-Expires": [
+            "11972"
+          ],
+          "Etag": [
+            "W/\"22fac6d309eb6b0698ccea0d24cab0de\""
+          ],
+          "Vary": [
+            "Accept-Encoding,accept-encoding",
+            "Origin"
+          ],
+          "X-Cache": [
+            "Miss from cloudfront"
+          ],
+          "Via": [
+            "1.1 7d38f3897cdb444e56484e816dfbc442.cloudfront.net (CloudFront)"
+          ],
+          "X-Amz-Cf-Pop": [
+            "ATL58-P2"
+          ],
+          "Alt-Svc": [
+            "h3=\":443\"; ma=86400"
+          ],
+          "X-Amz-Cf-Id": [
+            "nGHxSnPbfETaEno_kBdnYZHU3z8sfZg8CwcWh3c_2OxoRmUeyLiSvQ=="
+          ]
+        },
+        "body": {
+          "encoding": "ASCII-8BIT",
+          "string": "{\"page\":1,\"results\":[{\"adult\":false,\"backdrop_path\":\"/kXfqcdQKsToO0OUXHcrrNCHDBzO.jpg\",\"genre_ids\":[18,80],\"id\":278,\"original_language\":\"en\",\"original_title\":\"The Shawshank Redemption\",\"overview\":\"Imprisoned in the 1940s for the double murder of his wife and her lover, upstanding banker Andy Dufresne begins a new life at the Shawshank prison, where he puts his accounting skills to work for an amoral warden. During his long stretch in prison, Dufresne comes to be admired by the other inmates -- including an older prisoner named Red -- for his integrity and unquenchable sense of hope.\",\"popularity\":153.044,\"poster_path\":\"/9cqNxx0GxF0bflZmeSMuL5tnGzr.jpg\",\"release_date\":\"1994-09-23\",\"title\":\"The Shawshank Redemption\",\"video\":false,\"vote_average\":8.704,\"vote_count\":26120},{\"adult\":false,\"backdrop_path\":\"/hpgda6P9GutvdkDX5MUJ92QG9aj.jpg\",\"genre_ids\":[28,12,35],\"id\":384018,\"original_language\":\"en\",\"original_title\":\"Fast \\u0026 Furious Presents: Hobbs \\u0026 Shaw\",\"overview\":\"Ever since US Diplomatic Security Service Agent Hobbs and lawless outcast Shaw first faced off, they just have traded smack talk and body blows. But when cyber-genetically enhanced anarchist Brixton's ruthless actions threaten the future of humanity, they join forces to defeat him.\",\"popularity\":107.522,\"poster_path\":\"/qRyy2UmjC5ur9bDi3kpNNRCc5nc.jpg\",\"release_date\":\"2019-08-01\",\"title\":\"Fast \\u0026 Furious Presents: Hobbs \\u0026 Shaw\",\"video\":false,\"vote_average\":6.861,\"vote_count\":6935},{\"adult\":false,\"backdrop_path\":\"/48gcj1bcwyKC7JR2U9OIMZ0Plhx.jpg\",\"genre_ids\":[10402,99],\"id\":768410,\"original_language\":\"en\",\"original_title\":\"Shawn Mendes: Live in Concert\",\"overview\":\"In his hometown of Toronto, Shawn Mendes pours his heart out on stage with a live performance in a stadium packed with adoring fans.\",\"popularity\":6.917,\"poster_path\":\"/kgH1sTqrKH3rjAXPo1kZ6kwypM.jpg\",\"release_date\":\"2020-11-25\",\"title\":\"Shawn Mendes: Live in Concert\",\"video\":false,\"vote_average\":8.0,\"vote_count\":68},{\"adult\":false,\"backdrop_path\":\"/gQ7xTOBvbRpa2zm9SJSS2AGAtQA.jpg\",\"genre_ids\":[18],\"id\":284114,\"original_language\":\"es\",\"original_title\":\"El rebozo de Soledad\",\"overview\":\"Alberto Robles, a young doctor, is faced with the decision to surrender to a life full of comforts and luxuries or to continue dedicating himself body and soul to serving those who need it most.\",\"popularity\":4.179,\"poster_path\":\"/qmmrxJAXSKH14Y9f4JLmiNWZ2Em.jpg\",\"release_date\":\"1952-11-13\",\"title\":\"Soledad's Shawl\",\"video\":false,\"vote_average\":6.1,\"vote_count\":8},{\"adult\":false,\"backdrop_path\":\"/6POBC9eiJBYDfE6bidjrthKB6eC.jpg\",\"genre_ids\":[10402,99],\"id\":752939,\"original_language\":\"en\",\"original_title\":\"Shawn Mendes: In Wonder\",\"overview\":\"A portrait of singer-songwriter Shawn Mendes' life, chronicling the past few years of his rise and journey.\",\"popularity\":11.574,\"poster_path\":\"/aSs7V3ryvxCSpcXcxf9NY8YBtGC.jpg\",\"release_date\":\"2020-11-23\",\"title\":\"Shawn Mendes: In Wonder\",\"video\":false,\"vote_average\":8.2,\"vote_count\":155},{\"adult\":false,\"backdrop_path\":null,\"genre_ids\":[99],\"id\":589259,\"original_language\":\"ku\",\"original_title\":\"Demsala dawi: Sewaxan\",\"overview\":\"\\\"The Last Season: Shawaks\\\" revolves around an extended Shawak family whose life is marked by seasonal migration.\",\"popularity\":0.6,\"poster_path\":\"/74BUrzzLjXb7TqYk2orn3bVC3Dp.jpg\",\"release_date\":\"2010-05-14\",\"title\":\"The Last Season: Shawaks\",\"video\":false,\"vote_average\":6.0,\"vote_count\":2},{\"adult\":false,\"backdrop_path\":null,\"genre_ids\":[18,14,27],\"id\":1063850,\"original_language\":\"bn\",\"original_title\":\"ষ\",\"overview\":\"'Pett Kata Shaw' is the modern revival of the mysterious and lurid plots of traditional folk tales told from generation to generation.\",\"popularity\":0.743,\"poster_path\":\"/jJSdiRfgEH13Y9i73Yj7sFyGEa9.jpg\",\"release_date\":\"2023-07-27\",\"title\":\"Pett Kata Shaw\",\"video\":false,\"vote_average\":0.0,\"vote_count\":0},{\"adult\":false,\"backdrop_path\":null,\"genre_ids\":[10749],\"id\":626680,\"original_language\":\"ru\",\"original_title\":\"Платки\",\"overview\":\"When an American of Russian descent arrived at the dawn of perestroika in the Russian hinterland, in the town of Pavlovsky Posad, where old Russian shawls are made, a lover in love with these shawls, seen only in pictures, licked no one thought that drama would break out in the provincial silence ...\",\"popularity\":2.302,\"poster_path\":\"/aNa2IgI9xNDx94aGH3EYMzdnPWO.jpg\",\"release_date\":\"2007-07-18\",\"title\":\"Shawls\",\"video\":false,\"vote_average\":0.0,\"vote_count\":0},{\"adult\":false,\"backdrop_path\":null,\"genre_ids\":[99],\"id\":646561,\"original_language\":\"zh\",\"original_title\":\"邵氏光影傳奇\",\"overview\":\"Shaw Yifu founded Shaw Brothers (HK), Ltd. in 1958 as the largest private studio in the world at that time called Shaw Brothers and nicknamed the Oriental Hollywood. It established a complete and mature film production marketing system which continuously enriched and perfected its practices to achieve great success. Li Hanxiang developed Huangmei Opera Film and other historical plays. King Hu created the New Ancient Swordsman Film. Chang Cheh created the first film over a million box office record. And Jia Tang and Lau Kar-leung developed their own respective styles of Kungfu in their movies. From such work, Shaw Brothers produced a lasting world-wide influence. Shaw Brothers had produced over 850 films until it stopped its blockbuster production in 1980s. From oral history and old movies, we track down the details of the past, mixed with romance and sorrow, prosperity and impermanence.\",\"popularity\":0.6,\"poster_path\":\"/eTjbFtijaCIHKXobfHLMvVUzBPS.jpg\",\"release_date\":\"2018-10-18\",\"title\":\"The Legend of Shaw Brothers\",\"video\":false,\"vote_average\":0.0,\"vote_count\":0},{\"adult\":false,\"backdrop_path\":\"/se3L1ub8HZ6wcinNFkmz4nbVM6o.jpg\",\"genre_ids\":[99],\"id\":357799,\"original_language\":\"en\",\"original_title\":\"פרינסס שואו\",\"overview\":\"Through You Princess will follow Samantha, Kutiman, and some of the musicians around the world who are not aware of Kutiman creating his new music out of their musical web clips. Everyone is from another background, culture, and country, but all share now a mutual musical vision.\",\"popularity\":0.6,\"poster_path\":\"/i2j8ehNX6sm45C17gEvQ8tPg0ZL.jpg\",\"release_date\":\"2016-05-27\",\"title\":\"Presenting Princess Shaw\",\"video\":false,\"vote_average\":6.6,\"vote_count\":8},{\"adult\":false,\"backdrop_path\":\"/wSTUtg0jMQi3F4gCozJiT6OUsW.jpg\",\"genre_ids\":[35],\"id\":791494,\"original_language\":\"ar\",\"original_title\":\"شاومينج\",\"overview\":\"A group of young people during high school in Egypt, where electronic cheating appears largely on social networking sites , or what is known as (Shaw-Ming Cheating High School).\",\"popularity\":1.587,\"poster_path\":\"/70t6MwShYLbVDiexi6hdXg7kGyn.jpg\",\"release_date\":\"2021-02-03\",\"title\":\"Shaw-Ming\",\"video\":false,\"vote_average\":4.0,\"vote_count\":1},{\"adult\":false,\"backdrop_path\":null,\"genre_ids\":[18],\"id\":845901,\"original_language\":\"zh\",\"original_title\":\"妹仔檳榔攤\",\"overview\":\"\",\"popularity\":1.226,\"poster_path\":\"/kP8cC0UWspT9CkgsjQCgCWAR5uY.jpg\",\"release_date\":\"2021-04-30\",\"title\":\"Shawty\",\"video\":false,\"vote_average\":0.0,\"vote_count\":0},{\"adult\":false,\"backdrop_path\":null,\"genre_ids\":[99],\"id\":750581,\"original_language\":\"ar\",\"original_title\":\"شوا أبو أحمد\",\"overview\":\"A day in the life of a rural family.\",\"popularity\":0.6,\"poster_path\":\"/4sb3hqBSIS8ohWHVWyf53ahS7xg.jpg\",\"release_date\":\"1983-10-12\",\"title\":\"Shawa Bahmad\",\"video\":false,\"vote_average\":0.0,\"vote_count\":0},{\"adult\":false,\"backdrop_path\":null,\"genre_ids\":[],\"id\":758254,\"original_language\":\"ar\",\"original_title\":\"شاويش نص الليل\",\"overview\":\"Aging Constable Hassan (Farid Shawqi) continues to work hard in the Department of Drug Control while devoting himself to raising his son and daughter. He then discovers that the son became a drugug addict through a junkie dancer, so he intervenes in order to save his son.\",\"popularity\":1.144,\"poster_path\":\"/xr0Yv09emDGpBolCtm7IZSVI7Rx.jpg\",\"release_date\":\"1991-07-08\",\"title\":\"Shaweesh Noss El-leil\",\"video\":false,\"vote_average\":0.0,\"vote_count\":0},{\"adult\":false,\"backdrop_path\":null,\"genre_ids\":[99],\"id\":166165,\"original_language\":\"zh\",\"original_title\":\"电影香江：俪影倾情\",\"overview\":\"Hong Kong cinemas had a wide range of glamorous female stars during the golden age of the 60's and 70's. The series will take the audience on a sentimental journey to the good old days and once again look at the expansive epic costume dramas and huangmei operas in which actresses played both the male and female roles. Rare interviews with Sir Run Run Shaw, stars Ivy Ling Po, Shaw Yin Yin, Tanny Tie Ni and Cheng Pei Pei are also featured.\",\"popularity\":2.803,\"poster_path\":\"/m5CG7qy8SZ4EV7DGmV3KWGH2tq3.jpg\",\"release_date\":\"2003-01-03\",\"title\":\"Cinema Hong Kong: The Beauties of the Shaw Studio\",\"video\":false,\"vote_average\":7.0,\"vote_count\":3},{\"adult\":false,\"backdrop_path\":\"/k58kiB6cwaos4cVeKYLH0OJjVup.jpg\",\"genre_ids\":[99],\"id\":34317,\"original_language\":\"en\",\"original_title\":\"WWE: The Shawn Michaels Story - Heartbreak \\u0026 Triumph\",\"overview\":\"\",\"popularity\":6.736,\"poster_path\":\"/6f0C52iZfADzDiAjjvtC5Sjzz5T.jpg\",\"release_date\":\"2007-11-27\",\"title\":\"WWE: The Shawn Michaels Story - Heartbreak \\u0026 Triumph\",\"video\":true,\"vote_average\":9.3,\"vote_count\":3},{\"adult\":false,\"backdrop_path\":\"/8IRbDMZkjefc9dkced0xpJbSndo.jpg\",\"genre_ids\":[99],\"id\":84631,\"original_language\":\"en\",\"original_title\":\"Greatest Rivalries: Shawn Michaels vs. Bret Hart\",\"overview\":\"For more than a decade, Bret \\\"Hit Man\\\" Hart and Shawn Michaels engaged in perhaps the most storied rivalry in the history of sports entertainment, from their teams (the Hart Foundation and the Rockers), through battles for the Intercontinental Championship and the richest prize in the business, the WWE Championship. Their enmity spilled out of the ring, and led to the most infamous incident in the history of professional wrestling, The Montreal Screwjob. More than a decade later, the two men buried the hatchet as both are now WWE Hall of Famers. Now, for the first time ever, the two sit down together and rehash their intertwined destinies in Shawn Michaels vs. Bret Hart. These new, never-before-aired, interviews will shed new light and insight on issues and controversies fans have speculated about for years.\",\"popularity\":4.991,\"poster_path\":\"/4fFfPIUVkY5jPEWUgpcBsP5Ymsd.jpg\",\"release_date\":\"2011-10-25\",\"title\":\"Greatest Rivalries: Shawn Michaels vs. Bret Hart\",\"video\":true,\"vote_average\":8.5,\"vote_count\":6},{\"adult\":false,\"backdrop_path\":\"/u6hgtSIzW8nDKKWmun9JDhZz2fp.jpg\",\"genre_ids\":[99],\"id\":546312,\"original_language\":\"en\",\"original_title\":\"Shawshank: The Redeeming Feature\",\"overview\":\"Film critic and presenter Mark Kermode explores the fascination and praise audiences, fans and critics have behind the classic The Shawshank Redemption (1994) and how its importance grew higher over the years despite being an overlooked film when it was released and not getting any Oscars victories when it was nominated as one of the Best Pictures of the Year.\",\"popularity\":5.634,\"poster_path\":\"/b7DGM74MRfiLqEveVKwh0jnQ8zX.jpg\",\"release_date\":\"2001-09-08\",\"title\":\"Shawshank: The Redeeming Feature\",\"video\":false,\"vote_average\":8.6,\"vote_count\":15},{\"adult\":false,\"backdrop_path\":null,\"genre_ids\":[99],\"id\":272343,\"original_language\":\"en\",\"original_title\":\"Shawn Michaels: Mr Wrestlemania\",\"overview\":\"All of Shawn Michaels' WrestleMania moments plus an all new never-before-seen interview with the Heartbreak Kid himself!\",\"popularity\":1.897,\"poster_path\":\"/gYS6k7EcfTyFd9EBiny5GM5B3A7.jpg\",\"release_date\":\"2014-02-11\",\"title\":\"Shawn Michaels: Mr Wrestlemania\",\"video\":true,\"vote_average\":8.5,\"vote_count\":2},{\"adult\":false,\"backdrop_path\":\"/NRqbM84gqd7L4g9BqNz5WYY6EU.jpg\",\"genre_ids\":[99],\"id\":863037,\"original_language\":\"en\",\"original_title\":\"Biography: Shawn Michaels\",\"overview\":\"Chronicles the wild life of one of WWE's greatest performers and most enduring villains. After drug addiction nearly cost him his life, Shawn Michaels, aka \\\"The Heartbreak Kid,\\\" made one of the most improbable late-career comebacks in WWE history. He was inducted into the WWE Hall of Fame in 2011.\",\"popularity\":3.939,\"poster_path\":\"/glg3EedbHFlXJvCIWwriz6KD6k2.jpg\",\"release_date\":\"2021-05-16\",\"title\":\"Biography: Shawn Michaels\",\"video\":false,\"vote_average\":8.0,\"vote_count\":2}],\"total_pages\":6,\"total_results\":120}"
+        }
+      },
+      "recorded_at": "Fri, 10 May 2024 19:29:08 GMT"
+    }
+  ],
+  "recorded_with": "VCR 6.2.0"
+}

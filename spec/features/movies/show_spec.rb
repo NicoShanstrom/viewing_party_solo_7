@@ -1,7 +1,6 @@
 require 'rails_helper'
 
 RSpec.describe 'Movie show(detail) page', type: :feature do
-  # let(:movie_details) { load_fixture('movie_details.yml')}
   describe "When I visit a movie's detail page (`/users/:user_id/movies/:movie_id`)" do
     before(:each) do
       @user1 = User.create!(name: 'Tommy', email: 'tommy@email.com')
@@ -13,8 +12,6 @@ RSpec.describe 'Movie show(detail) page', type: :feature do
     describe "US3" do
       it 'has a button to create a viewing party', :vcr do
         # When I visit a movie's detail page (`/users/:user_id/movies/:movie_id`) where :id is a valid user id,
-        # allow_any_instance_of(MoviedbService).to receive(:get).and_return(movie_details)
-       
         # - a button to Create a Viewing Party
         expect(page).to have_button("Create a Viewing Party")
       end
@@ -56,7 +53,6 @@ RSpec.describe 'Movie show(detail) page', type: :feature do
           expect(page).to have_content('Author: SWITCH')
           expect(page).to have_content('Username: maketheSWITCH')
           expect(page).to have_content('Rating: 6')
-          # save_and_open_page
           expect(page).to have_content("Review: By this point in the franchise, ‘Fast & Furious’ fans will know exactly what to expect from ‘Hobbs and Shaw’, and there’s just enough here that's fresh enough to warrant taking another ride with the series.\r - Ashley Teresa\r \r Read Ashley's full article...\r https://www.maketheswitch.com.au/article/review-fast-and-furious-hobbs-and-shaw-very-furious-not-so-fast")
         end
       end

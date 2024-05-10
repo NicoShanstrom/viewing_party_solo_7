@@ -12,14 +12,6 @@ class UsersController < ApplicationController
    
    end
 
-
-
-   # def search_by_title
-   #    moviedb_service = MoviedbService.new
-   #    response = moviedb_service.get("/3/search/keyword", query: { query: keyword, limit: 20 })
-   #    @movies = response[:results] if response.present?
-   # end
-
    def create
       user = User.new(user_params)
       if user.save

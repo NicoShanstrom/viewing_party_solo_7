@@ -12,7 +12,6 @@ class Users::ViewingPartiesController < ApplicationController
     response = moviedb_service.get("/3/movie/#{@movie_id}")
     @movie = response
     @viewing_party = ViewingParty.new
-    # require 'pry'; binding.pry
   end
 
   def create
@@ -24,7 +23,6 @@ class Users::ViewingPartiesController < ApplicationController
     else
       render :new
     end
-    # require 'pry'; binding.pry
   end
 
   private
