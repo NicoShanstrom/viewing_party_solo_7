@@ -6,8 +6,12 @@ class Users::ViewingPartiesController < ApplicationController
   end
 
   def new
-    # require 'pry'; binding.pry
     @user = User.find(params[:user_id])
+    @movie_id = params[:movie_id]
+    moviedb_service = MoviedbService.new
+    response = moviedb_service.get("/3/movie/#{@movie_id}")
+    @movie = response[:results]
     @viewing_party = ViewingParty.new
+    # require 'pry'; binding.pry
   end
 end

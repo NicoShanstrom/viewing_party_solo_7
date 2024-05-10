@@ -4,7 +4,6 @@ class MoviedbService
     @connect = Faraday.new(url: "https://api.themoviedb.org") do |conn|
       conn.request :authorization, 'Bearer', Rails.application.credentials.themoviedb[:bearer_token]
     end
-    # require 'pry'; binding.pry
   end
   
   def get(path, params = {})

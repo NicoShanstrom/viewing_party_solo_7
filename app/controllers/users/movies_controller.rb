@@ -13,11 +13,17 @@ class Users::MoviesController < ApplicationController
   end
 
   def show
-    # require 'pry'; binding.pry
     @user = User.find(params[:user_id])
     moviedb_service = MoviedbService.new
-    response = moviedb_service.get("/3/movie/#{params[:movie_id]}")
-    # response = moviedb_service.get("/3/movie", {query: params[:movie_id]})
-    @movie = response[:results]
+
+    details_response = moviedb_service.get("/3/movie/#{params[:id]}")
+    @movie = details_response
+
+    cast_response = moviedb_service.get("/3/movie/#{params[:id]}/credits")
+    @cast = cast_response[:cast].first(10)
+
+    reviews_response = moviedb_service.get("/3/movie/#{params[:id]}/reviews")
+    @reviews = reviews_response[:results]
+    # require 'pry'; binding.pry
   end
 end
