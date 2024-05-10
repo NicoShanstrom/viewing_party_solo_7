@@ -5,8 +5,6 @@ RSpec.describe "new viewing party page" do
     @user1 = User.create!(name: 'Nico', email: 'nshanstrom23@turing.edu')
     @user2 = User.create!(name: 'Sam', email: 'sam@email.com')
 
-    
-  
     visit new_user_movie_viewing_party_path(@user2, 238)
   end
   describe 'US4' do
@@ -26,11 +24,9 @@ RSpec.describe "new viewing party page" do
       expect(page).to have_field(:guest_email3)
       # - Button to create a party
       expect(page).to have_button('Create a party')
-      # save_and_open_page
     end
 
     it 'can create a new viewing party', :vcr do
-      # viewing_party = @user1.viewing_parties.create()
       fill_in 'Duration of Party (minutes)', with: "175"
       fill_in 'Date', with: '2024-06-10'
       fill_in 'Start Time', with: '2:00pm'

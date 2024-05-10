@@ -9,7 +9,6 @@ class MoviedbService
   def get(path, params = {})
     response = @connect.get(path, params)
     handle_response(response)
-    # require 'pry'; binding.pry
   rescue Faraday::Error => e
     raise "Faraday Error: #{e.message}"
   end
@@ -27,12 +26,3 @@ class MoviedbService
     end
   end
 end
-# private
-
-  # def handle_response(response)
-  #   if response.success?
-  #     JSON.parse(response.body, symbolize_names: true)
-  #   else
-  #     raise "Error: #{response.status}"
-  #   end
-  # end
