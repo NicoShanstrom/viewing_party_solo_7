@@ -1,0 +1,36 @@
+<h1><%@movie[:title]%> Details!</h1>
+
+<div class="movie_attrs">
+  <h3>Movie title: <%= @movie[:title] %></h3>
+  <h3>Vote Average: <%= @movie[:vote_average] %></h3>
+  <h3>Vote Count: <%= @movie[:vote_count] %></h3>
+  <h3>Movie runtime: <%= format_runtime(@movie[:runtime]) %></h3>
+  <h3>Movie genre(s): <%= movie_genre_names(@movie) %></h3>
+  <h3>Movie summary description: <%= @movie[:overview]%></h3>
+</div>
+
+<h2>Cast members</h2>
+<div class="movie_cast">
+  <% @cast.each do |actor| %>
+    <h3>Actor/Actress: <%= actor[:name] %> - as character: <%=actor[:character]%></h3>
+  <%end%>
+</div>
+
+<h2>Review information</h2>
+<div class="reviews">
+  <% @reviews.each do |review| %>
+    <div id="review_info_<%= review[:id] %>" class="review">
+      <h3>Author: <%= review[:author] %></h3>
+      <h3>Username: <%= review[:author_details][:username] %></h3>
+      <h3>Rating: <%= review[:author_details][:rating] %></h3>
+      <h3>Review: <%= review[:content] %></h3>
+
+  <%end%>
+</div>
+
+
+
+
+
+<%= button_to "Back to Discover Page", discover_user_path(@user), method: :get %>
+<%= button_to "Create a Viewing Party", new_user_movie_viewing_party_path(user_id: @user.id, movie_id: @movie[:id]), method: :get %>

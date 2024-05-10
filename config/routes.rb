@@ -11,10 +11,8 @@ Rails.application.routes.draw do
     member do
       get 'discover'
     end
-    resources :movies, only: [:index, :show], controller: 'users/movies'
+    resources :movies, only: [:index, :show], controller: 'users/movies' do
+      resources :viewing_parties, only: [:new, :create], controller: 'users/viewing_parties'
+    end
   end
-
-  # namespace :users do
-  #   resources :movies, only: [:index, :show]
-  # end
 end

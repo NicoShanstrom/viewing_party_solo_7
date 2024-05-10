@@ -39,8 +39,7 @@ RSpec.describe 'User Discover Page', type: :feature do
       expect(page).to have_button("Back to Discover Page")
       # Notes:
       # There should only be a maximum of 20 results. The above details should be listed for each movie.
-      num_movies = page.all('.vote-average').count
-      expect(num_movies).to be <= 20
+      expect(page).to have_css('.vote_average', maximum: 20)
     end
 
     it 'US2 - takes the user to the movies results page after filling out and submitting movie title search', :vcr do
@@ -61,8 +60,7 @@ RSpec.describe 'User Discover Page', type: :feature do
       expect(page).to have_button("Back to Discover Page")
       #     Notes:
       # There should only be a maximum of 20 results. The above details should be listed for each movie.
-      num_movies = page.all('.vote-average').count
-      expect(num_movies).to be <= 20
+      expect(page).to have_css('.vote_average', maximum: 20)
     end
   end
 end
