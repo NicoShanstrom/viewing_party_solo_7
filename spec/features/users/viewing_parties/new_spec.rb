@@ -34,5 +34,7 @@ RSpec.describe "new viewing party page" do
       click_button "Create a party"
       expect(current_path).to eq(user_movie_viewing_parties_path(@user2, movie_id: '238'))
     end
+
+    
   end
 end
