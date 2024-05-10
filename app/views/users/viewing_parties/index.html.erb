@@ -1,1 +1,9 @@
 <h1><%=@user.name%>'s' Viewing Parties</h1>
+
+<% @viewing_parties.each do |viewing_party| %>
+
+      <h3>Duration: <%= viewing_party.duration %></h3>
+      <h3>Date: <%= viewing_party.date %></h3>
+      <h3>Start Time: <%= viewing_party.start_time %></h3>
+      <h3>Host: <%= viewing_party.find_host.name %></h3>
+<%end%>
