@@ -10,7 +10,7 @@ class Users::ViewingPartiesController < ApplicationController
     @movie_id = params[:movie_id]
     moviedb_service = MoviedbService.new
     response = moviedb_service.get("/3/movie/#{@movie_id}")
-    @movie = response[:results]
+    @movie = response
     @viewing_party = ViewingParty.new
     # require 'pry'; binding.pry
   end

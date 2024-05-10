@@ -1,0 +1,23 @@
+<h1>Create a viewing party for <%= @movie[:title] %></h1>
+
+<%= form_with url: user_movie_viewing_parties_path(@user), method: :post do |form| %>
+  <%= form.label :duration, "Duration of Party (minutes)" %>
+  <%= form.number_field :duration, value: format_runtime(@movie[:runtime]), min: @movie[:runtime], required: true %>
+
+  <%= form.label :date, "Date" %>
+  <%= form.date_field :date, required: true %>
+
+  <%= form.label :start_time, "Start Time" %>
+  <%= form.time_field :start_time, required: true %>
+
+  <%= form.label :guest_email, "Guest's Email Address" %>
+  <%= form.text_field :guest_email %>
+
+  <%= form.label :guest_email2, "Guest's Email Address 2" %>
+  <%= form.text_field :guest_email2 %>
+
+  <%= form.label :guest_email3, "Guest's Email Address 3" %>
+  <%= form.text_field :guest_email3 %>
+
+  <%= form.submit "Create a party" %>
+<% end %>

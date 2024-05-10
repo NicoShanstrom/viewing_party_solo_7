@@ -13,16 +13,17 @@ RSpec.describe "new viewing party page" do
       # I should see the name of the movie title rendered above a form with the following fields:
       expect(page).to have_content("Create a viewing party for The Godfather")
       # - Duration of Party with a default value of movie runtime in minutes; a viewing party should NOT be created if set to a value less than the duration of the movie
-      expect(page).to have_field("Viewing party[duration]")
+      expect(page).to have_field(:duration)
       # - When: field to select date
-      expect(page).to have_field('Viewing party[date]')
+      expect(page).to have_field(:date)
       # - Start Time: field to select time
-      expect(page).to have_field('Viewing party[start_time]')
+      expect(page).to have_field(:start_time)
       # - Guests: three (optional) text fields for guest email addresses
-      expect(page).to have_field('Viewing party[guest_email]')
+      expect(page).to have_field(:guest_email)
+      expect(page).to have_field(:guest_email2)
+      expect(page).to have_field(:guest_email3)
       # - Button to create a party
       expect(page).to have_button('Create a party')
-      end
     end
   end
 end
